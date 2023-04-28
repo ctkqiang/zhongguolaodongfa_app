@@ -1,10 +1,18 @@
 import 'dart:convert';
+import 'dart:io';
 
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:logger/logger.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:screenshot/screenshot.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:zhongguolaodongfa_app/constant/Strings.dart';
 import 'package:zhongguolaodongfa_app/model/laodongfa.dart';
+import 'package:zhongguolaodongfa_app/pages/content_viewer.dart';
 
 class LaoDongFaController extends GetxController {
   final logger = Logger();
@@ -50,5 +58,43 @@ class LaoDongFaController extends GetxController {
     }
 
     return contents.value!;
+  }
+
+  void screenShot(content) {
+    final screenshotController = ScreenshotController();
+
+    screenshotController
+        .captureFromWidget(
+          Container(
+            padding: const EdgeInsets.all(40),
+            decoration: const BoxDecoration(color: Colors.red),
+            child: Text(
+              "\"$content\"\n\n《$appName》",
+              style: const TextStyle(
+                color: Colors.yellow,
+                fontWeight: FontWeight.bold,
+                fontSize: 30,
+                fontFamily: "main",
+              ),
+            ),
+          ),
+        )
+        .then((value) async => await saveAndShareImg(value));
+  }
+
+  Future<void> saveAndShareImg(img) async {
+    assert(img != null);
+
+    final directory = await getApplicationDocumentsDirectory();
+    final imagePath = await File('${directory.path}/img.png').create();
+    await imagePath.writeAsBytes(img);
+
+    await Share.shareFiles([imagePath.path]);
+  }
+
+  void onTap({required LaoDongFa? laodongfa}) {
+    if (kDebugMode) logger.i(laodongfa!.chapter);
+
+    Get.to(() => ContentViewer(laoDongFa: laodongfa!));
   }
 }

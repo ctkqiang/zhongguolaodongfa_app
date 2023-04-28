@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:logger/logger.dart';
 import 'package:zhongguolaodongfa_app/constant/Strings.dart';
 import 'package:zhongguolaodongfa_app/pages/splash.dart';
 
@@ -9,7 +10,7 @@ Future<void> main() async {
 
     runApp(const MyApp());
   } catch (issue) {
-    throw issue.toString();
+    Logger().e(issue.toString());
   }
 }
 
