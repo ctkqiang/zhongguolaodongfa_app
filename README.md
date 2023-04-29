@@ -11,4 +11,6 @@
 
 ```
 ### 下载
+
+1. 安卓
 ![localImage](https://raw.githubusercontent.com/johnmelodyme/zhongguolaodongfa_app/main/assets/qr-code.png)
