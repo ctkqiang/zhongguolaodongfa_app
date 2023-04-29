@@ -10,17 +10,18 @@
 即可使用。如果您对劳动法律有任何疑问，欢迎使用我们的应用程序进行查询和了解。
 
 ```
+
 ### 下载
 
 1. 安卓
-<img src="https://raw.githubusercontent.com/johnmelodyme/zhongguolaodongfa_app/main/assets/qr-code.png" alt= “” width="200" height="200">
+   <img src="https://raw.githubusercontent.com/johnmelodyme/zhongguolaodongfa_app/main/assets/qr-code.png" alt= “” width="200" height="200">
 
 2. 苹果
-<a href="">
+   <a href="">
    <img src="https://1000logos.net/wp-content/uploads/2020/08/apple-app-store-logo.jpg" alt= “” width="300" height="100">
-</a>
-
+   </a>
 
 </br></br></br></br>
 如果您觉得我的项目有价值，并希望支持其持续发展，请考虑进行捐赠。您的捐款将用于支付维护和改进该项目的成本，同时也让我能够投入更多的时间来开发它。任何金额的捐赠都非常感谢，将有助于确保该项目的持续成功。感谢您的支持！
 
+<img src="https://raw.githubusercontent.com/johnmelodyme/zhongguolaodongfa_app/main/assets/IMG_3639.PNG" alt= “” width="350" height="450">
