@@ -7,9 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:logger/logger.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:screenshot/screenshot.dart';
-import 'package:share_plus/share_plus.dart';
 import 'package:zhongguolaodongfa_app/constant/Strings.dart';
 import 'package:zhongguolaodongfa_app/model/laodongfa.dart';
 import 'package:zhongguolaodongfa_app/pages/content_viewer.dart';
@@ -79,17 +77,21 @@ class LaoDongFaController extends GetxController {
             ),
           ),
         )
-        .then((value) async => await saveAndShareImg(value));
+        .then((value) async => await saveAndShareImg(value, text: content));
   }
 
-  Future<void> saveAndShareImg(img) async {
+  Future<void> saveAndShareImg(img, {text}) async {
     assert(img != null);
 
-    final directory = await getApplicationDocumentsDirectory();
-    final imagePath = await File('${directory.path}/img.png').create();
-    await imagePath.writeAsBytes(img);
+    // final directory = Directory("/");
+    // final imagePath = await File(
+    //   "${Directory(directory.toString())}/img.png",
+    // ).create();
+    // await imagePath.writeAsBytes(img);
 
-    await Share.shareFiles([imagePath.path]);
+    // await Share.shareFiles([imagePath.path]);
+
+    // await Share.share(text);
   }
 
   void onTap({required LaoDongFa? laodongfa}) {

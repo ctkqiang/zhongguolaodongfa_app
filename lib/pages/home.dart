@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:zhongguolaodongfa_app/constant/Strings.dart';
 import 'package:zhongguolaodongfa_app/controller/laodongfa_controller.dart';
 import 'package:zhongguolaodongfa_app/model/laodongfa.dart';
+import 'package:zhongguolaodongfa_app/pages/info_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -36,6 +38,12 @@ class _HomePageState extends State<HomePage> {
             fontFamily: "main",
           ),
         ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.info, color: Colors.white),
+            onPressed: () => Get.to(() => const InfoPage()),
+          ),
+        ],
       ),
       body: WillPopScope(
         onWillPop: () async => false,
@@ -58,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                     return true;
                   },
                   child: ListView(
-                    physics: const NeverScrollableScrollPhysics(),
+                    // physics: const NeverScrollableScrollPhysics(),
                     children: snapshot.data!.map((item) {
                       return ListTile(
                         title: Text(
