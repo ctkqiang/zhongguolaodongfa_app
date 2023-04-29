@@ -14,3 +14,8 @@
 
 1. 安卓
 <img src="https://raw.githubusercontent.com/johnmelodyme/zhongguolaodongfa_app/main/assets/qr-code.png" alt= “” width="200" height="200">
+
+2. 苹果
+<a href="">
+   <img src="https://1000logos.net/wp-content/uploads/2020/08/apple-app-store-logo.jpg" alt= “” width="300" height="100">
+</a>
