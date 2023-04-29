@@ -1,4 +1,4 @@
-package cn.zhongguolaodongfa_app
+package cn.ldf.app.zhongguolaodongfa_app
 
 import io.flutter.embedding.android.FlutterActivity
 

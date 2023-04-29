@@ -19,3 +19,8 @@
 <a href="">
    <img src="https://1000logos.net/wp-content/uploads/2020/08/apple-app-store-logo.jpg" alt= “” width="300" height="100">
 </a>
+
+
+</br></br></br></br>
+如果您觉得我的项目有价值，并希望支持其持续发展，请考虑进行捐赠。您的捐款将用于支付维护和改进该项目的成本，同时也让我能够投入更多的时间来开发它。任何金额的捐赠都非常感谢，将有助于确保该项目的持续成功。感谢您的支持！
+
