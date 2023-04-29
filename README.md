@@ -13,4 +13,4 @@
 ### 下载
 
 1. 安卓
-![localImage](https://raw.githubusercontent.com/johnmelodyme/zhongguolaodongfa_app/main/assets/qr-code.png)
+<img src="https://raw.githubusercontent.com/johnmelodyme/zhongguolaodongfa_app/main/assets/qr-code.png" alt= “” width="200" height="200">
